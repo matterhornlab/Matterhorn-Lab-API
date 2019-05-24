@@ -1,0 +1,21 @@
+Your dashboard for {{ company }} goes here.
+
+And you have {{ entries|length }} entries.
+
+The average price is {{ stats.avg_price }}.
+
+<br>
+Available stats<br>
+
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+  </tr>
+  {% for key, value in stats.items %}
+  <tr>
+    <td>{{ key }}</td>
+    <td>{{ value }}</td>
+  </tr>
+  {% endfor %}
+</table>
